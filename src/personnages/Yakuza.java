@@ -20,4 +20,22 @@ public class Yakuza extends Humain {
 		
 		this.reputation++;
 	}
+	
+	public int perdre() {
+		int argent = super.getArgent();
+		
+		super.perdreArgent(argent);
+		this.reputation--;
+		parler("J'ai perdu :(");
+		
+		return argent;
+	}
+	
+	public int gagner(int gain) {
+		super.gagnerArgent(gain);
+		this.reputation++;
+		parler("J'ai gagné!!! Yipeeeeeee :)");
+		
+		return gain;
+	}
 }

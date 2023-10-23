@@ -6,6 +6,7 @@ public class HistoireTP4 {
 		Humain courier = new Humain("Courier 6", "Sunset sarsapiralla", 200);
 		Commercant dona = new Commercant("Dona", "Beer", 150);
 		Yakuza benny = new Yakuza("Benny", "Whiskey", 6000, "TOPS Casino");
+		Ronin ace = new Ronin("Ace", "Water", 60);
 		
 		courier.direBonjour();
 		courier.acheter("54 cartouches de .308", 108);
@@ -20,5 +21,10 @@ public class HistoireTP4 {
 		
 		benny.direBonjour();
 		benny.extorquer(dona);
+		
+		ace.direBonjour();
+		ace.donner(dona);
+		
+		ace.provoquer(benny);
 	}
 }
