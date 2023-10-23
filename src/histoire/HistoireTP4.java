@@ -4,10 +4,17 @@ import personnages.*;
 public class HistoireTP4 {
 	public static void main(String[] args) {
 		Humain courier = new Humain("Courier 6", "Sunset sarsapiralla", 200);
+		Commercant dona = new Commercant("Dona", "Beer", 150);
+		
 		courier.direBonjour();
 		courier.acheter("54 cartouches de .308", 108);
 		courier.boire();
 		courier.acheter("100000000 NCR dollars", 5);
 		courier.acheter("Hardened T-51b Powered infantry combat armor", 8263);
+	
+		dona.direBonjour();
+		dona.seFaireExtorquer();
+		dona.recevoir(2);
+		dona.boire();
 	}
 }
