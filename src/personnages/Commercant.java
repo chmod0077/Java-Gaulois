@@ -6,10 +6,12 @@ public class Commercant extends Humain {
 	}
 
 	public int seFaireExtorquer() {
+		int argent = super.getArgent();
+		
 		super.perdreArgent(super.getArgent());
 		super.parler("J'ai tout perdu... Le monde est trop injuste, tu sais, avant que je sois un commerçant, j'étais un baron et je possédais une dizaine de Brahmin, puis j'ai on m'a forcé à abandonner mon ranche, par un baron plus gros...");
 		
-		return super.getArgent();
+		return argent;
 	}
 	
 	public void recevoir(int argent) {

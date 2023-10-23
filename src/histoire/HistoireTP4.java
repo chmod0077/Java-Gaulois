@@ -5,6 +5,7 @@ public class HistoireTP4 {
 	public static void main(String[] args) {
 		Humain courier = new Humain("Courier 6", "Sunset sarsapiralla", 200);
 		Commercant dona = new Commercant("Dona", "Beer", 150);
+		Yakuza benny = new Yakuza("Benny", "Whiskey", 6000, "TOPS Casino");
 		
 		courier.direBonjour();
 		courier.acheter("54 cartouches de .308", 108);
@@ -16,5 +17,8 @@ public class HistoireTP4 {
 		dona.seFaireExtorquer();
 		dona.recevoir(2);
 		dona.boire();
+		
+		benny.direBonjour();
+		benny.extorquer(dona);
 	}
 }
