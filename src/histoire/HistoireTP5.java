@@ -37,5 +37,14 @@ public class HistoireTP5 {
 		masako.faireLeGentil();
 		masako.direBonjour();
 		roro.direBonjour();
+		
+		GrandMere grandMere = new GrandMere("Grand-Mère", "thé", 10);
+		grandMere.faireConnaissanceAvec(akimoto);
+		grandMere.faireConnaissanceAvec(yaku);
+		grandMere.faireConnaissanceAvec(masako);
+		grandMere.faireConnaissanceAvec(kumi);
+		grandMere.faireConnaissanceAvec(marco);
+		grandMere.faireConnaissanceAvec(chonin);
+		grandMere.ragoter();
 	}
 }

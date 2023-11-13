@@ -73,7 +73,7 @@ public class Humain {
 		memoriser(humain);
 	}
 	
-	private void memoriser(Humain humain)
+	protected void memoriser(Humain humain)
 	{
 		this.memoire[this.nbConnaissance % 30] = humain;
 		this.nbConnaissance++;
