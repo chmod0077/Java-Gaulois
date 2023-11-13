@@ -2,26 +2,18 @@ package personnages;
 
 import java.util.Random;
 
-public class Druide {
+public class Druide extends Gaulois {
 	private String nom;
 	private int effetPotionMin;
 	private int effetPotionMax;
 	private int forcePotion;
 	
 	public Druide(String nom, int effetPotionMin, int effetPotionMax) {
-		this.nom = nom;
+		super(nom, effetPotionMax);
 		this.effetPotionMin = effetPotionMin;
 		this.effetPotionMax = effetPotionMax;
 		this.forcePotion = 1;
 		parler("Bonjour, je suis le druide " + nom + " et ma potion peut aller d'une force " + effetPotionMin + " à " + effetPotionMax + ".");
-	}
-	
-	public String getNom() {
-		return nom;
-	}
-	
-	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + " »");
 	}
 	
 	private String prendreParole() {
@@ -33,15 +25,15 @@ public class Druide {
 		forcePotion = random.nextInt(this.effetPotionMax - this.effetPotionMin) + this.effetPotionMin;
 		
 		if (forcePotion > 7) {
-			parler("J'ai préparé une super potion de force " + forcePotion);
+			super.parler("J'ai préparé une super potion de force " + forcePotion);
 		} else {
-			parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + forcePotion);
+			super.parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + forcePotion);
 		}
 	}
 	
 	public void booster(Gaulois gaulois) {
 		if (gaulois.getNom() == "Obelix") {
-			parler("Non, Obélix !... Tu n'auras pas de potion magique !");
+			super.parler("Non, Obélix !... Tu n'auras pas de potion magique !");
 		} else {
 			gaulois.boirePotion(this.forcePotion);
 		}
