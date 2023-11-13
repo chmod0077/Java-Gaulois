@@ -9,7 +9,7 @@ public class Humain {
 	
 	public Humain(String nom, String boisson, int argent) {
 		this.nom = nom;
-		this.boisson = boisson;
+		this.setBoisson(boisson);
 		this.argent = argent;
 		this.nbConnaissance = 0;
 	}
@@ -22,18 +22,26 @@ public class Humain {
 		return argent;
 	}
 	
+	public String getBoisson() {
+		return boisson;
+	}
+
+	public void setBoisson(String boisson) {
+		this.boisson = boisson;
+	}
+
 	protected void parler(String texte) {
 		System.out.println("(" + this.nom + ") - " + texte);
 	}
 	
 	public void direBonjour() {
 		parler("Bonjour ! Je m'appelle " + this.nom + 
-				" et j'aime boire du " + this.boisson);
+				" et j'aime boire du " + this.getBoisson());
 	}
 	
 	public void boire() {
 		parler(
-				"Mmm, un bon verre de " + this.boisson +
+				"Mmm, un bon verre de " + this.getBoisson() +
 				"! GLOUPS !");
 	}
 	
